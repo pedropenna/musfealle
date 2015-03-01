@@ -15,14 +15,18 @@
         <div>
             <input type="button" value="Login" onclick="submitPassword()">
         </div>
+
+        <div>
+            <textarea id="debugBucket" style="width:1000px; height:900px"></textarea>
+        </div>
         
         <script type="text/javascript">
 
 
 function authentication_complete() {
-    console.log("authentication_complete");
+    writeDebugMessage("authentication_complete");
     if (lightdm.is_authenticated) {
-    console.log("is authenticated.");
+    writeDebugMessage("is authenticated.");
         lightdm.login(
             lightdm.authentication_user,
             lightdm.default_session
@@ -31,19 +35,19 @@ function authentication_complete() {
 }
 
 function submitPassword() {
-    console.log("submitPassword");
+    writeDebugMessage("submitPassword");
     lightdm.cancel_timed_login();
     lightdm.start_authentication(document.getElementById("username").value);
-    lightdm.provide_secret(document.getElementById("password").value);
 }
 
 
 function show_error(message) {
-    console.log("error: " + message);
+    writeDebugMessage("error: " + message);
 }
 
 function show_prompt(message) {
-    console.log("prompt: " + message);
+    writeDebugMessage("prompt: " + message);
+    lightdm.provide_secret(document.getElementById("password").value);
 }
 
 
@@ -99,7 +103,7 @@ if (typeof lightdm == 'undefined') {
 	};
 
 	lightdm.provide_secret= function(secret) {
-console.log("provide_secret: " + secret);
+writeDebugMessage("provide_secret: " + secret);
 		if (typeof lightdm._username == 'undefined' || !lightdm._username) {
 			throw "must call start_authentication first"
 		}
@@ -118,7 +122,7 @@ console.log("provide_secret: " + secret);
 	};
 
 	lightdm.start_authentication= function(username) {
-console.log("start_auth: " + username);
+writeDebugMessage("start_auth: " + username);
 		_lightdm_mock_check_argument_length(arguments, 1);
 		if (lightdm._username) {
 			throw "Already authenticating!";
@@ -132,7 +136,7 @@ console.log("start_auth: " + username);
 	};
 
 	lightdm.cancel_authentication= function() {
-console.log("cancel_auth");
+writeDebugMessage("cancel_auth");
 		_lightdm_mock_check_argument_length(arguments, 0);
 		if (!lightdm._username) {
 			throw "we are not authenticating";
@@ -141,27 +145,23 @@ console.log("cancel_auth");
 	};
 
 	lightdm.suspend= function() {
-		alert("System Suspended. Bye Bye");
-		document.location.reload(true);
+		writeDebugMessage("System Suspended. Bye Bye");
 	};
 
 	lightdm.hibernate= function() {
-		alert("System Hibernated. Bye Bye");
-		document.location.reload(true);
+		writeDebugMessage("System Hibernated. Bye Bye");
 	};
 
 	lightdm.restart= function() {
-		alert("System restart. Bye Bye");
-		document.location.reload(true);
+		writeDebugMessage("System restart. Bye Bye");
 	};
 
 	lightdm.shutdown= function() {
-		alert("System Shutdown. Bye Bye");
-		document.location.reload(true);
+		writeDebugMessage("System Shutdown. Bye Bye");
 	};
 
 	lightdm.login= function(user, session) {
-console.log("login: " + user + ", session: " + session);
+writeDebugMessage("login: " + user + ", session: " + session);
 		_lightdm_mock_check_argument_length(arguments, 2);
 		if (!lightdm.is_authenticated) {
 			throw "The system is not authenticated";
@@ -169,8 +169,7 @@ console.log("login: " + user + ", session: " + session);
 		if (user !== lightdm.authentication_user) {
 			throw "this user is not authenticated";
 		}
-		alert("logged in successfully!!");
-		document.location.reload(true);
+		writeDebugMessage("logged in successfully!!");
 	};
 
 	if (lightdm.timed_login_delay > 0) {
@@ -195,7 +194,10 @@ function _lightdm_mock_get_user(username) {
 	return user;
 }
 
-
+function writeDebugMessage(message) {
+    console.log(message);
+    document.getElementById("debugBucket").value += "\n" + message;
+}
 
 document.getElementById("username").focus();
                            
