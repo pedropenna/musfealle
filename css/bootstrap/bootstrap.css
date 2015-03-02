@@ -1693,23 +1693,23 @@ output {
   width: 100%;
   height: 43px;
   padding: 10px 15px;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.42857143;
-  color: #2c3e50;
-  background-color: #ffffff;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 0, 0.6);
   background-image: none;
-  border: 1px solid #dce4ec;
+  border: 1px solid #000000;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.575);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.575);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
   border-color: #2c3e50;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(44, 62, 80, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.75), 0 0 8px rgba(244, 62, 80, 0.6);
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.75), 0 0 8px rgba(244, 62, 80, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #acb6c0;

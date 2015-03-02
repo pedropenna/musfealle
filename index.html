@@ -9,6 +9,7 @@
         <title>Musfealle - Lightdm Webkit Greeter Theme</title>
 
         <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/mock.js"></script>
         <script src="js/main.js"></script>
 
 
@@ -16,54 +17,29 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap/prettify.css">
         
         <style type="text/css">
-            input {
-                margin-top: 5px;
-                font-size: 20px;
-                font-family: Helvetica;
-                border-radius: 7px;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                padding: 8px 16px 8px 16px;
-                color: rgba(0, 0, 0, 0.95);
-                background-color: rgba(255, 255, 255, 0.3);
-                font-weight: bold;
-            }
-
-            input:focus {
-                box-shadow: 0 0 0 2pt rgba(0, 0, 0, 0.5);
-                outline: none;
-            }
-
-            textarea {
-                display: none;
-            }
-
-            input[type=button] {
-                display:none;
-            }
-
             html {
-                background: url(/usr/share/lightdm-webkit/themes/musfealle/img/wallpaper.jpg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+                background: url(/usr/share/lightdm-webkit/themes/musfealle/img/phenomenon_by_aiRaGe.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                font-family: sans-serif;
+            }
 
+            div {
+                padding: 2px;
             }
         </style>
     </head>
     <body>
-        <div style="position:absolute; top:calc(45%); left:calc(70%)">
+        <div style="position:absolute; top:calc(55%); left:calc(70%);
+                background-color: rgba(255, 255, 255, 0.2);   border-radius: 4px;">
             <div>
-                <input type="text" name="username" id="username">
+                <input type="text" name="username" id="username" class="form-control">
             </div>
             <div>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" class="form-control">
             </div>
-        </div>
-
-        <input type="button" value="failsafe" onclick="submitPassword()">
-        <div style="display:none">
-            <textarea id="debugBucket" style="width:1000px; height:900px"></textarea>
         </div>
     </body>
 </html>
