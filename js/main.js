@@ -1,5 +1,5 @@
 
-var selectedSession = lightdm.default_session;
+var selectedSession = lightdm.sessions[0];
 var selectedSessionIndex = 0;
 
 /* Listeners required by Lightdm */
