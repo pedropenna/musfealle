@@ -38,6 +38,7 @@ if (typeof lightdm == 'undefined') {
 
     lightdm.provide_secret = function(secret) {
         writeDebugMessage("provide_secret: " + secret);
+        writeDebugMessage("lightdm._username : " + lightdm._username);
 	if (typeof lightdm._username == 'undefined' || !lightdm._username) {
 	    throw "must call start_authentication first"
 	}
@@ -65,8 +66,8 @@ if (typeof lightdm == 'undefined') {
 	if (!user) {
 	    show_error(username + " is an invalid user");
 	}
-	show_prompt("Password: ");
 	lightdm._username = username;
+	show_prompt("Password: ");
     };
 
     lightdm.cancel_authentication = function() {
