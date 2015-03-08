@@ -89,4 +89,16 @@ jQuery(document).ready(function() {
     jQuery("#username").val(lightdm.users[0].name);
 
     updateSessionNameContainer();
+
+
+    $('#motherOfAllContainers').fadeTo('slow', 0.3, function() {
+        $('#motherOfAllContainers').css("background", "url(/usr/share/lightdm-webkit/themes/musfealle/img/namibia_trees.jpg) no-repeat center center fixed");
+        $('#motherOfAllContainers').css("-webkit-background-size", "cover");
+        $('#motherOfAllContainers').css("-moz-background-size", "cover");
+        $('#motherOfAllContainers').css("-o-background-size", "cover");
+        $('#motherOfAllContainers').css("background-size: 100%");
+
+        $("#inputBoxesContainer").show();
+    }).fadeTo('slow', 1);
+
 });
