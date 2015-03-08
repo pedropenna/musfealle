@@ -49,10 +49,6 @@ function updateSessionNameContainer() {
 
 jQuery(document).ready(function() {
 
-    /* Moves the focus to the password field so in the best case scenario
-       all the user has to do is type in the password and press ENTER */
-    jQuery("#password").focus();
-
     /* Creates the keypress listener to submit when the user
        presses ENTER or SHIFT+ENTER */
     jQuery("input").keypress(function() {
@@ -99,6 +95,10 @@ jQuery(document).ready(function() {
         $('#motherOfAllContainers').css("background-size: 100%");
 
         $("#inputBoxesContainer").show();
+
+        /* Moves the focus to the password field so in the best case scenario
+           all the user has to do is type in the password and press ENTER */
+        jQuery("#password").focus();
     }).fadeTo('slow', 1);
 
 });
