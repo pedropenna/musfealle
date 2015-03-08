@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
 
 
     $('#motherOfAllContainers').fadeTo('slow', 0.3, function() {
-        $('#motherOfAllContainers').css("background", "url(/usr/share/lightdm-webkit/themes/musfealle/img/namibia_trees.jpg) no-repeat center center fixed");
+        $('#motherOfAllContainers').css("background", "url(/usr/share/lightdm-webkit/themes/musfealle/img/conc.jpg) no-repeat center center fixed");
         $('#motherOfAllContainers').css("-webkit-background-size", "cover");
         $('#motherOfAllContainers').css("-moz-background-size", "cover");
         $('#motherOfAllContainers').css("-o-background-size", "cover");
