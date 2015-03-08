@@ -1706,7 +1706,7 @@ output {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #bbbbbb;
+  border-color: #bbdddd;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(255,255,255,0.75), 0 0 8px rgba(244, 62, 80, 0.6);
   box-shadow: inset 0 1px 1px rgba(255,255,255,0.75), 0 0 8px rgba(244, 62, 80, 0.6);
