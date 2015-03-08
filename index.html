@@ -38,23 +38,28 @@
                 font-weight: bold;
                 padding: 0px 16px 0px 16px;
             }
+
+            #inputBoxesContainer {
+                position:absolute;
+                top:calc(55%);
+                left:calc(70%);
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 8px;
+            }
         </style>
     </head>
     <body>
-        <div style="position:absolute; top:calc(55%); left:calc(70%);
-                background-color: rgba(255, 255, 255, 0.1);   border-radius: 8px;">
+        <div id="inputBoxesContainer">
             <div>
-                <input type="text" name="username" id="username"
-                       class="form-control" size="16">
+                <input type="text" name="username" id="username" class="form-control" size="16">
             </div>
 
             <div>
-                <input type="password" name="password" id="password"
-                       class="form-control" size="16">
+                <input type="password" name="password" id="password" class="form-control" size="16">
             </div>
               
             <div id="sessionDisplay">
-              Session: <span id="sessionNameContainer" style="margin-top: 20px"></span>
+              Session: <span id="sessionNameContainer" style="margin-top: 20px" ></span>
             </div>
         </div>
     </body>
