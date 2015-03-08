@@ -29,26 +29,32 @@
             div {
                 padding: 3px;
             }
+
+            #sessionDisplay {
+                background-color: rgba(230, 230, 150, 0.6);
+                border-radius: 4px;
+                color: #000000;
+                display:none;
+                font-weight: bold;
+                padding: 0px 16px 0px 16px;
+            }
         </style>
     </head>
     <body>
         <div style="position:absolute; top:calc(55%); left:calc(70%);
                 background-color: rgba(255, 255, 255, 0.1);   border-radius: 8px;">
             <div>
-                <input type="text" name="username" id="username" class="form-control">
-            </div>
-            <div>
-                <input type="password" name="password" id="password" class="form-control">
-            </div>
-            <div>
-              
-            <div style="background-color: rgba(230, 230, 150, 0.6);
-                        border-radius: 4px; margin-top: 20px;
-              color: #000000; display:none; font-weight: bold;
-              padding-left: 16px; padding-right: 16px" id="sessionDisplay">
-              Session: <span id="sessionNameContainer"></span>
+                <input type="text" name="username" id="username"
+                       class="form-control" size="16">
             </div>
 
+            <div>
+                <input type="password" name="password" id="password"
+                       class="form-control" size="16">
+            </div>
+              
+            <div id="sessionDisplay">
+              Session: <span id="sessionNameContainer" style="margin-top: 20px"></span>
             </div>
         </div>
     </body>
