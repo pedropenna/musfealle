@@ -12,8 +12,8 @@ This greeter theme was built based on the Antergos Greeter Theme (https://github
 3. Edit the file /etc/lightdm/lightdm-webkit-greeter.conf and set the
 "webkit-theme" property to "musfealle".
 4. Make sure the property "greeter-session" in
-/etc/lightdm/lightdm.conf is set to "lightdm-webkit-greeter" or
-"lightdm-webkit2-greeter".
+/etc/lightdm/lightdm.conf is set to "lightdm-webkit-greeter" (or
+"lightdm-webkit2-greeter")s.
 
 And that should be it!
 
