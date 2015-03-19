@@ -18,6 +18,15 @@ Obs: Make sure the property "greeter-session" in
 
 And that should be it!
 
+## Keyboard Shortcuts
+
+- Alt + R: Restart
+- Alt + D: Shutdown
+- Alt + H: Hibernate
+- Alt + P: Suspend
+- Alt + S or Alt + C: Cycle through the session options
+- Tab: Move focus between username and password fields
+- Enter: Log In
 
 *Musfealle means "mouse trap" in old english according to some dictionay sites.*
 
