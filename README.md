@@ -13,7 +13,7 @@ This greeter theme was built based on the Antergos Greeter Theme (https://github
 "webkit-theme" property to "musfealle".
 4. Make sure the property "greeter-session" in
 /etc/lightdm/lightdm.conf is set to "lightdm-webkit-greeter" (or
-"lightdm-webkit2-greeter")s.
+"lightdm-webkit2-greeter").
 
 And that should be it!
 
