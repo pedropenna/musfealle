@@ -16,9 +16,8 @@ Obs: Make sure the property "greeter-session" in
 /etc/lightdm/lightdm.conf is set to "lightdm-webkit-greeter" or
 "lightdm-webkit2-greeter".
 
+And that should be it!
 
-The next time you login the greeter theme should be shown to you.
 
-
-Musfealle means "mouse trap" in old english according to some dictionay sites.
+*Musfealle means "mouse trap" in old english according to some dictionay sites.*
 
