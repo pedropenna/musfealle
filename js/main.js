@@ -99,6 +99,6 @@ jQuery(document).ready(function() {
         /* Moves the focus to the password field so in the best case scenario
            all the user has to do is type in the password and press ENTER */
         jQuery("#password").focus();
-    }).fadeTo('slow', 1);
+    }).fadeTo(2500, 1);
 
 });
