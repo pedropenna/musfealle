@@ -88,13 +88,14 @@ jQuery(document).ready(function() {
 
 
     $('#motherOfAllContainers').fadeTo('slow', 0.3, function() {
-        $('#motherOfAllContainers').css("background", "url(/usr/share/lightdm-webkit/themes/musfealle/img/conc.jpg) no-repeat center center fixed");
-        $('#motherOfAllContainers').css("-webkit-background-size", "cover");
-        $('#motherOfAllContainers').css("-moz-background-size", "cover");
-        $('#motherOfAllContainers').css("-o-background-size", "cover");
-        $('#motherOfAllContainers').css("background-size: 100%");
+        // $('#motherOfAllContainers').css("background", "url(/usr/share/lightdm-webkit/themes/musfealle/img/conc.jpg) no-repeat center center fixed");
+        // $('#motherOfAllContainers').css("-webkit-background-size", "cover");
+        // $('#motherOfAllContainers').css("-moz-background-size", "cover");
+        // $('#motherOfAllContainers').css("-o-background-size", "cover");
+        // $('#motherOfAllContainers').css("background-size: 100%");
 
         $("#inputBoxesContainer").show();
+        $("#backgroundVideo").show();
 
         /* Moves the focus to the password field so in the best case scenario
            all the user has to do is type in the password and press ENTER */

@@ -56,7 +56,12 @@ margin-top: 16px;
         </style>
     </head>
     <body>
+              
       <div id="motherOfAllContainers">
+        <video id="backgroundVideo" poster="christmas_snow.webm" autoplay="" loop=""
+        src="christmas_snow.webm" style="position:absolute; top: 0px;
+        left: 0px; min-width: 100%; min-height: 100%; z-index:0; display:none"></video>
+        
         <div id="inputBoxesContainer" style="display:none">
             <div>
                 <input type="text" name="username" id="username" class="form-control" size="16">
@@ -65,7 +70,6 @@ margin-top: 16px;
             <div>
                 <input type="password" name="password" id="password" class="form-control" size="16">
             </div>
-              
             <div id="sessionDisplay">
               Session: <span id="sessionNameContainer" style="" ></span>
             </div>
