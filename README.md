@@ -30,5 +30,5 @@ And that should be it!
 - Tab: Move focus between username and password fields
 - Enter: Log In
 
-*Musfealle means "mouse trap" in old english according to some dictionary sites.*
+*Obs: Musfealle means "mouse trap" in old english according to some dictionary sites.*
 
