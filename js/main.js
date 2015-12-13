@@ -1,4 +1,3 @@
-
 var selectedSession = lightdm.sessions[0];
 var selectedSessionIndex = 0;
 
@@ -42,6 +41,12 @@ function cycleSessions() {
     writeDebugMessage("selectedSession: " + selectedSession.name);
 }
 
+var userIndex = 0;
+function cycleUsers() {
+    writeDebugMessage("cycleUsers");
+    jQuery("#username").val(lightdm.users[++userIndex % lightdm.users.length].name);
+}
+
 function updateSessionNameContainer() {
     writeDebugMessage("updateSessionNameContainer: " + selectedSession.name);
     jQuery("#sessionNameContainer").html(selectedSession.name);
@@ -55,7 +60,7 @@ jQuery(document).ready(function() {
         if (event.which == 13 || event.which == 10) {
             event.preventDefault();
             submitPassword();
-        }       
+        }
     });
 
     jQuery(document).keydown(function() {
@@ -74,11 +79,14 @@ jQuery(document).ready(function() {
                 case 82: /* Alt + R */
                     lightdm.restart();
                     break;
-                case 68: /* Alt + D */
-                    lightdm.shutdown();
+                case 76: /* Alt + L */
+                    cycleUsers();
                     break;
+            case 68: /* Alt + D */
+                lightdm.shutdown();
+                break;
             }
-        }       
+        }
     });
 
     /* Initiates the username field with the first username of the users' list */
