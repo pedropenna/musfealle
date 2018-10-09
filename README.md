@@ -2,10 +2,9 @@
 
 ##### A LightDM Webkit Greeter Theme that doesn't force you to use a mouse.
 
-![Screenshot]
-(https://raw.githubusercontent.com/pedropenna/musfealle/master/img/screenshot_musfealle.png)
+![Screenshot](https://raw.githubusercontent.com/pedropenna/musfealle/master/img/screenshot_musfealle.png)
 
-This greeter theme was built based on the Antergos Greeter Theme (https://github.com/Antergos/lightdm-webkit-theme-antergos)
+This greeter theme was built based on the [Antergos Greeter Theme](https://github.com/Antergos/lightdm-webkit-theme-antergos)
 
 
 ## Installation
